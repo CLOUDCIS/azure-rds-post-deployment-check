@@ -1,0 +1,1 @@
+# azure-rds-post-deployment-check
