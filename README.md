@@ -3,7 +3,7 @@
 Powershell script to connect to Azure rds deployment after deploying from our Azure RDS deployment template. Script will check connectivity to RDWeb and also checks certificates.
 
 Azure RDS Deployment
-https://cloudinfrastructureservices.co.uk/how-to-setup-remote-desktop-services-rds-2019-farm-on-azure/
+<a href="https://cloudinfrastructureservices.co.uk/how-to-setup-remote-desktop-services-rds-2019-farm-on-azure/">Azure RDS Farm</a>
 
 Script does the following:
 
