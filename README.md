@@ -19,9 +19,13 @@ Script does the following:
     
     start with -verbose if you need to troubleshoot script
 
+## Step 1
+
 Open up PowerShell in Administrator mode and connect to your tenant where you've deployed RDS in Azure:
 
 `Connect-AzAccount -TenantId '000000000000'`
+
+## Step 2
                 
 ### EXAMPLE 1
 `.\azure-rm-rdp-post-deployment.ps1`
