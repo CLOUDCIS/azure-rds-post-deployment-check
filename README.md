@@ -19,40 +19,25 @@ Script does the following:
     
     start with -verbose if you need to troubleshoot script
 
-.NOTES  
-   NOTE: to remove certs from all stores Get-ChildItem -Recurse -Path cert:\ -DnsName *<%subject%>* | Remove-Item
-   File Name  : azure-rm-rdp-post-deployment.ps1
-   Version    : 180721 fix issue where nsg attached to nic didnt have all necessary properties populated
-   History    : 
-                170908 updated commands to remove public ip
-                170809 checking vm for 3389 and 443 for nsg
-                170807 fix for $ipAddress.IPAddress
                 
-.EXAMPLE  
-    .\azure-rm-rdp-post-deployment.ps1
-    query azure rm for all resource groups with for all public ips.
+### EXAMPLE 1
+    `.\azure-rm-rdp-post-deployment.ps1`
 
-.EXAMPLE
-    .\azure-rm-rdp-post-deployment.ps1 -rdWebUrl https://contoso.eastus.cloudapp.azure.com/RDWeb
-    used to bypass Azure enumeration and to copy cert from url to local cert store
+Query azure rm for all resource groups with for all public ips.
 
-.PARAMETER addPublicIp
-    add public ip address and nsg to selected virtual machine
+### EXAMPLE 2
+    `.\azure-rm-rdp-post-deployment.ps1 -rdWebUrl https://contoso.eastus.cloudapp.azure.com/RDWeb`
 
-.PARAMETER enumerateSubscriptions
-    to query all subscriptions and not just current one
 
-.PARAMETER noPrompt
-    to not prompt when adding cert to cert store or when modifying hosts file
- 
-.PARAMETER rdWebUrl
-    used to pass complete RDWeb url to script to bypass Azure enumeration. will add self-signed cert to cert store.
+Used to bypass Azure enumeration and to copy cert from url to local cert store
 
-.PARAMETER resourceManagerName
-    optional parameter to specify Resource Group Name
 
-.PARAMETER publicIpAddressName
-    optional parameter to override ip resource name public ip address
+### Note
 
-.PARAMETER update
-    optional parameter to check for updated script from github
+If you receive an error message about PowerShell execution policyand, run the following command:
+
+`Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force`
+
+Then try running the script again
+
+** NOTE: ** to remove certs from all stores `Get-ChildItem -Recurse -Path cert:\ -DnsName *<%subject%>* 
