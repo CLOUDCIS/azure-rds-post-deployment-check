@@ -21,12 +21,12 @@ Script does the following:
 
                 
 ### EXAMPLE 1
-    `.\azure-rm-rdp-post-deployment.ps1`
+`.\azure-rm-rdp-post-deployment.ps1`
 
 Query azure rm for all resource groups with for all public ips.
 
 ### EXAMPLE 2
-    `.\azure-rm-rdp-post-deployment.ps1 -rdWebUrl https://contoso.eastus.cloudapp.azure.com/RDWeb`
+`.\azure-rm-rdp-post-deployment.ps1 -rdWebUrl https://contoso.eastus.cloudapp.azure.com/RDWeb`
 
 
 Used to bypass Azure enumeration and to copy cert from url to local cert store
