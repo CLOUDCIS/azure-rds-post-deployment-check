@@ -40,4 +40,4 @@ If you receive an error message about PowerShell execution policyand, run the fo
 
 Then try running the script again
 
-** NOTE: ** to remove certs from all stores `Get-ChildItem -Recurse -Path cert:\ -DnsName *<%subject%>* 
+**NOTE:** to remove certs from all stores `Get-ChildItem -Recurse -Path cert:\ -DnsName *<%subject%>* 
